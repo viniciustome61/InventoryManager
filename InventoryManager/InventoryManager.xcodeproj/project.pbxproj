@@ -6,6 +6,10 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		276E6F912FD4B4A4000F61EC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 276E6F8A2FD4B4A4000F61EC /* AppDelegate.swift */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXContainerItemProxy section */
 		2781B4A72FD4AF8F0063B7F0 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -24,6 +28,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		276E6F8A2FD4B4A4000F61EC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2781B4902FD4AF8C0063B7F0 /* InventoryManager.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InventoryManager.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2781B4A62FD4AF8F0063B7F0 /* InventoryManagerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = InventoryManagerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2781B4B02FD4AF900063B7F0 /* InventoryManagerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = InventoryManagerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -85,10 +90,83 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		2781B4872FD4AF8C0063B7F0 = {
+		276E6F9D2FD4C215000F61EC /* App */ = {
 			isa = PBXGroup;
 			children = (
 				2781B4922FD4AF8C0063B7F0 /* InventoryManager */,
+				276E6F8A2FD4B4A4000F61EC /* AppDelegate.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		276E6F9E2FD4C25A000F61EC /* Coordinators */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Coordinators;
+			sourceTree = "<group>";
+		};
+		276E6F9F2FD4C2D5000F61EC /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		276E6FA12FD4C310000F61EC /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				276E6FA32FD4C326000F61EC /* Inventory */,
+				276E6FA22FD4C31E000F61EC /* Dashboard */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		276E6FA22FD4C31E000F61EC /* Dashboard */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Dashboard;
+			sourceTree = "<group>";
+		};
+		276E6FA32FD4C326000F61EC /* Inventory */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Inventory;
+			sourceTree = "<group>";
+		};
+		276E6FA42FD4C34A000F61EC /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				276E6FA62FD4C368000F61EC /* Components */,
+				276E6FA52FD4C356000F61EC /* Extensions */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		276E6FA52FD4C356000F61EC /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		276E6FA62FD4C368000F61EC /* Components */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		2781B4872FD4AF8C0063B7F0 = {
+			isa = PBXGroup;
+			children = (
+				276E6FA42FD4C34A000F61EC /* Core */,
+				276E6FA12FD4C310000F61EC /* Modules */,
+				276E6F9F2FD4C2D5000F61EC /* Models */,
+				276E6F9E2FD4C25A000F61EC /* Coordinators */,
+				276E6F9D2FD4C215000F61EC /* App */,
 				2781B4A92FD4AF8F0063B7F0 /* InventoryManagerTests */,
 				2781B4B32FD4AF900063B7F0 /* InventoryManagerUITests */,
 				2781B4912FD4AF8C0063B7F0 /* Products */,
@@ -249,6 +327,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				276E6F912FD4B4A4000F61EC /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -293,7 +372,7 @@
 				INFOPLIST_FILE = InventoryManager/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIMainStoryboardFile = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -324,7 +403,7 @@
 				INFOPLIST_FILE = InventoryManager/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIMainStoryboardFile = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
