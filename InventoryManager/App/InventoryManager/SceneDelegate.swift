@@ -10,26 +10,21 @@ import UIKit
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     var window: UIWindow?
-
+    var appCoordinator: AppCoordinator?
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
-        // 1. Pegamos a cena atual (a janela do app)
         guard let windowScene = (scene as? UIWindowScene) else { return }
         
-        // 2. Criamos uma Window (a moldura do nosso app) baseada nessa cena
         let window = UIWindow(windowScene: windowScene)
         
-        // 3. Criamos uma ViewController inicial genérica só para teste
-        let viewController = UIViewController()
-        viewController.view.backgroundColor = .systemBlue // Tela azul para sabermos que funcionou
+        // Instanciamos o Coordinator passando a nossa janela principal
+        let coordinator = AppCoordinator(window: window)
         
-        // 4. Dizemos que a tela principal da nossa Window é essa ViewController
-        window.rootViewController = viewController
+        // Mandamos o Coordinator iniciar o fluxo de navegação
+        coordinator.start()
         
-        // 5. Dizemos para o iOS mostrar a Window e torná-la a janela principal
-        window.makeKeyAndVisible()
-        
-        // 6. Salvamos a Window na propriedade da classe para ela não sumir da memória
+        // Guardamos a referência
+        self.appCoordinator = coordinator
         self.window = window
     }
 

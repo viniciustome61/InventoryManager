@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		276E6F912FD4B4A4000F61EC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 276E6F8A2FD4B4A4000F61EC /* AppDelegate.swift */; };
+		276E6FAB2FD4D4AD000F61EC /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 276E6FA92FD4C749000F61EC /* AppCoordinator.swift */; };
+		276E6FAC2FD4D6A9000F61EC /* DashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 276E6FA72FD4C6F3000F61EC /* DashboardViewController.swift */; };
+		276E6FAD2FD4D6B0000F61EC /* InventoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 276E6FA82FD4C729000F61EC /* InventoryViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,13 +32,17 @@
 
 /* Begin PBXFileReference section */
 		276E6F8A2FD4B4A4000F61EC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		276E6FA72FD4C6F3000F61EC /* DashboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardViewController.swift; sourceTree = "<group>"; };
+		276E6FA82FD4C729000F61EC /* InventoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InventoryViewController.swift; sourceTree = "<group>"; };
+		276E6FA92FD4C749000F61EC /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
+		276E6FAA2FD4C84B000F61EC /* WatchModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchModel.swift; sourceTree = "<group>"; };
 		2781B4902FD4AF8C0063B7F0 /* InventoryManager.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InventoryManager.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2781B4A62FD4AF8F0063B7F0 /* InventoryManagerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = InventoryManagerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2781B4B02FD4AF900063B7F0 /* InventoryManagerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = InventoryManagerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
-		2781B4B82FD4AF900063B7F0 /* Exceptions for "InventoryManager" folder in "InventoryManager" target */ = {
+		276E6FB32FD4FAC5000F61EC /* Exceptions for "InventoryManager" folder in "InventoryManager" target */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
 				Info.plist,
@@ -48,7 +55,7 @@
 		2781B4922FD4AF8C0063B7F0 /* InventoryManager */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			exceptions = (
-				2781B4B82FD4AF900063B7F0 /* Exceptions for "InventoryManager" folder in "InventoryManager" target */,
+				276E6FB32FD4FAC5000F61EC /* Exceptions for "InventoryManager" folder in "InventoryManager" target */,
 			);
 			path = InventoryManager;
 			sourceTree = "<group>";
@@ -102,6 +109,7 @@
 		276E6F9E2FD4C25A000F61EC /* Coordinators */ = {
 			isa = PBXGroup;
 			children = (
+				276E6FA92FD4C749000F61EC /* AppCoordinator.swift */,
 			);
 			path = Coordinators;
 			sourceTree = "<group>";
@@ -109,6 +117,7 @@
 		276E6F9F2FD4C2D5000F61EC /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				276E6FAA2FD4C84B000F61EC /* WatchModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -125,6 +134,7 @@
 		276E6FA22FD4C31E000F61EC /* Dashboard */ = {
 			isa = PBXGroup;
 			children = (
+				276E6FA72FD4C6F3000F61EC /* DashboardViewController.swift */,
 			);
 			path = Dashboard;
 			sourceTree = "<group>";
@@ -132,6 +142,7 @@
 		276E6FA32FD4C326000F61EC /* Inventory */ = {
 			isa = PBXGroup;
 			children = (
+				276E6FA82FD4C729000F61EC /* InventoryViewController.swift */,
 			);
 			path = Inventory;
 			sourceTree = "<group>";
@@ -327,7 +338,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				276E6FAB2FD4D4AD000F61EC /* AppCoordinator.swift in Sources */,
+				276E6FAD2FD4D6B0000F61EC /* InventoryViewController.swift in Sources */,
 				276E6F912FD4B4A4000F61EC /* AppDelegate.swift in Sources */,
+				276E6FAC2FD4D6A9000F61EC /* DashboardViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -368,8 +382,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = InventoryManager/Info.plist;
+				INFOPLIST_FILE = "/Users/Vinny/Programação/Desenvolvimento IOS/UIKit/Projetos pessoais/InventoryManager/InventoryManager/App/InventoryManager/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = "";
@@ -380,8 +393,8 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = vinicius.InventoryManager;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.ViniciusInventoryManager;
+				PRODUCT_NAME = InventoryManager;
 				STRING_CATALOG_GENERATE_SYMBOLS = YES;
 				SWIFT_APPROACHABLE_CONCURRENCY = YES;
 				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
@@ -399,8 +412,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = InventoryManager/Info.plist;
+				INFOPLIST_FILE = "/Users/Vinny/Programação/Desenvolvimento IOS/UIKit/Projetos pessoais/InventoryManager/InventoryManager/App/InventoryManager/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = "";
@@ -411,8 +423,8 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = vinicius.InventoryManager;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.ViniciusInventoryManager;
+				PRODUCT_NAME = InventoryManager;
 				STRING_CATALOG_GENERATE_SYMBOLS = YES;
 				SWIFT_APPROACHABLE_CONCURRENCY = YES;
 				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
