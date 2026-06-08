@@ -11,6 +11,11 @@
 		276E6FAB2FD4D4AD000F61EC /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 276E6FA92FD4C749000F61EC /* AppCoordinator.swift */; };
 		276E6FAC2FD4D6A9000F61EC /* DashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 276E6FA72FD4C6F3000F61EC /* DashboardViewController.swift */; };
 		276E6FAD2FD4D6B0000F61EC /* InventoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 276E6FA82FD4C729000F61EC /* InventoryViewController.swift */; };
+		277D61D12FD7781B00BA3656 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 277D61D02FD7781B00BA3656 /* Launch Screen.storyboard */; };
+		279774222FD782A100BD4DBA /* WatchModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 276E6FAA2FD4C84B000F61EC /* WatchModel.swift */; };
+		27EA54AD2FD77C360046944B /* InventoryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27EA54AC2FD77C360046944B /* InventoryViewModel.swift */; };
+		27EA54B22FD77E130046944B /* WatchRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27EA54B12FD77E130046944B /* WatchRepository.swift */; };
+		27F2A3492FD783C80040F244 /* DashboardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27F2A3432FD783C80040F244 /* DashboardViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,9 +41,13 @@
 		276E6FA82FD4C729000F61EC /* InventoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InventoryViewController.swift; sourceTree = "<group>"; };
 		276E6FA92FD4C749000F61EC /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		276E6FAA2FD4C84B000F61EC /* WatchModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchModel.swift; sourceTree = "<group>"; };
+		277D61D02FD7781B00BA3656 /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 		2781B4902FD4AF8C0063B7F0 /* InventoryManager.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InventoryManager.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2781B4A62FD4AF8F0063B7F0 /* InventoryManagerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = InventoryManagerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2781B4B02FD4AF900063B7F0 /* InventoryManagerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = InventoryManagerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		27EA54AC2FD77C360046944B /* InventoryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InventoryViewModel.swift; sourceTree = "<group>"; };
+		27EA54B12FD77E130046944B /* WatchRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchRepository.swift; sourceTree = "<group>"; };
+		27F2A3432FD783C80040F244 /* DashboardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
@@ -102,6 +111,7 @@
 			children = (
 				2781B4922FD4AF8C0063B7F0 /* InventoryManager */,
 				276E6F8A2FD4B4A4000F61EC /* AppDelegate.swift */,
+				277D61D02FD7781B00BA3656 /* Launch Screen.storyboard */,
 			);
 			path = App;
 			sourceTree = "<group>";
@@ -134,6 +144,7 @@
 		276E6FA22FD4C31E000F61EC /* Dashboard */ = {
 			isa = PBXGroup;
 			children = (
+				27F2A3432FD783C80040F244 /* DashboardViewModel.swift */,
 				276E6FA72FD4C6F3000F61EC /* DashboardViewController.swift */,
 			);
 			path = Dashboard;
@@ -143,6 +154,7 @@
 			isa = PBXGroup;
 			children = (
 				276E6FA82FD4C729000F61EC /* InventoryViewController.swift */,
+				27EA54AC2FD77C360046944B /* InventoryViewModel.swift */,
 			);
 			path = Inventory;
 			sourceTree = "<group>";
@@ -173,6 +185,7 @@
 		2781B4872FD4AF8C0063B7F0 = {
 			isa = PBXGroup;
 			children = (
+				27EA54AE2FD77D850046944B /* Repositories */,
 				276E6FA42FD4C34A000F61EC /* Core */,
 				276E6FA12FD4C310000F61EC /* Modules */,
 				276E6F9F2FD4C2D5000F61EC /* Models */,
@@ -192,6 +205,14 @@
 				2781B4B02FD4AF900063B7F0 /* InventoryManagerUITests.xctest */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		27EA54AE2FD77D850046944B /* Repositories */ = {
+			isa = PBXGroup;
+			children = (
+				27EA54B12FD77E130046944B /* WatchRepository.swift */,
+			);
+			path = Repositories;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -314,6 +335,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				277D61D12FD7781B00BA3656 /* Launch Screen.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -338,8 +360,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				27EA54AD2FD77C360046944B /* InventoryViewModel.swift in Sources */,
 				276E6FAB2FD4D4AD000F61EC /* AppCoordinator.swift in Sources */,
+				27EA54B22FD77E130046944B /* WatchRepository.swift in Sources */,
 				276E6FAD2FD4D6B0000F61EC /* InventoryViewController.swift in Sources */,
+				27F2A3492FD783C80040F244 /* DashboardViewModel.swift in Sources */,
+				279774222FD782A100BD4DBA /* WatchModel.swift in Sources */,
 				276E6F912FD4B4A4000F61EC /* AppDelegate.swift in Sources */,
 				276E6FAC2FD4D6A9000F61EC /* DashboardViewController.swift in Sources */,
 			);

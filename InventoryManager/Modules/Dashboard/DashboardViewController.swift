@@ -2,6 +2,7 @@ import UIKit
 
 class DashboardViewController: UIViewController {
     
+    private let viewModel = DashboardViewModel()
     // MARK: - 1. UI Elements (Criando os componentes)
     
     private let titleLabel: UILabel = {
@@ -45,6 +46,8 @@ class DashboardViewController: UIViewController {
         
         setupHierarchy()
         setupConstraints()
+        
+        profitValueLabel.text = viewModel.totalProfitText
     }
     
     // MARK: - 2. Hierarchy (Adicionando ao ecrã)

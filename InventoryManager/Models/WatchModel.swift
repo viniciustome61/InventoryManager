@@ -1,14 +1,24 @@
 import Foundation
+import SwiftData
 
-struct WatchModel {
-    let id: UUID
-    let brand: String       // Ex: "Garmin", "Coros"
-    let modelName: String   // Ex: "Forerunner 165", "Pace 3"
-    let purchasePrice: Double
-    let salePrice: Double
-    let isInStock: Bool
+@Model
+class WatchModel {
+    @Attribute(.unique) var id: UUID
+    var brand: String
+    var modelName: String
+    var purchasePrice: Double
+    var salePrice: Double
+    var isInStock: Bool
     
-    // Propriedade computada que já calcula o lucro automaticamente!
+    init(id: UUID = UUID(), brand: String, modelName: String, purchasePrice: Double, salePrice: Double, isInStock: Bool) {
+        self.id = id
+        self.brand = brand
+        self.modelName = modelName
+        self.purchasePrice = purchasePrice
+        self.salePrice = salePrice
+        self.isInStock = isInStock
+    }
+    
     var profit: Double {
         return salePrice - purchasePrice
     }
