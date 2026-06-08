@@ -1,0 +1,8 @@
+//
+//  WatchRepository.swift
+//  InventoryManager
+//
+//  Created by Vinny   on 08/06/26.
+//
+
+import Foundation
