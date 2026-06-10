@@ -16,18 +16,30 @@ class InventoryViewController: UIViewController {
     
     // MARK: - Lifecycle
     override func viewDidLoad() {
-            super.viewDidLoad()
-            view.backgroundColor = .systemBackground
-            title = "Estoque"
-            navigationController?.navigationBar.prefersLargeTitles = true
-            
-            setupHierarchy()
-            setupConstraints()
-            
-            // <-- Adicione estas duas linhas
-            tableView.dataSource = self
-            tableView.delegate = self
-        }
+        super.viewDidLoad()
+        view.backgroundColor = .systemBackground
+        title = "Estoque"
+        navigationController?.navigationBar.prefersLargeTitles = true
+        
+        setupHierarchy()
+        setupConstraints()
+        
+        // <-- Adicione estas duas linhas
+        tableView.dataSource = self
+        tableView.delegate = self
+        
+        navigationItem.rightBarButtonItem = UIBarButtonItem(
+            barButtonSystemItem: .add,
+            target: self,
+            action: #selector(addWatchTapped)
+        )
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        // Recarrega os dados do banco e atualiza a interface toda vez que a tela aparece
+        tableView.reloadData()
+    }
     
     // MARK: - 2. Hierarchy
     private func setupHierarchy() {
@@ -44,6 +56,13 @@ class InventoryViewController: UIViewController {
             tableView.trailingAnchor.constraint(equalTo: view.trailingAnchor)
         ])
     }
+    @objc private func addWatchTapped() {
+            let addVC = AddWatchViewController()
+            // Envolvemos a tela num NavigationController para ela ter a barra no topo
+            let navController = UINavigationController(rootViewController: addVC)
+            // Apresenta como um modal (deslizando de baixo para cima)
+            present(navController, animated: true)
+        }
 }
 
 // MARK: - UITableViewDataSource & Delegate
