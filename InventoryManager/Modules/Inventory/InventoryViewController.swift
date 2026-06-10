@@ -89,5 +89,18 @@ extension InventoryViewController: UITableViewDataSource, UITableViewDelegate {
         
         cell.contentConfiguration = content
         return cell
-    }
+        }
+    
+    // 3. Habilita o gesto de arrastar para apagar
+        func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+            
+            // Verifica se a ação do usuário foi realmente o gesto de deletar (botão vermelho)
+            if editingStyle == .delete {
+                // 1. Avisa a ViewModel para apagar do banco de dados
+                viewModel.deleteWatch(at: indexPath.row)
+                
+                // 2. Remove a linha da tela com uma animação suave
+                tableView.deleteRows(at: [indexPath], with: .automatic)
+            }
+        }
 }

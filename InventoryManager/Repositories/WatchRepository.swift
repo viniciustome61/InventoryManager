@@ -41,6 +41,19 @@ class WatchRepository {
         }
     }
     
+    // Função para deletar um registro do banco de dados (Equivalente ao DELETE)
+        func deleteWatch(_ watch: WatchModel) {
+            guard let context = context else { return }
+            
+            context.delete(watch) // Marca o objeto para exclusão
+            
+            do {
+                try context.save() // Efetiva a exclusão no SQLite
+            } catch {
+                print("Erro ao deletar o relógio: \(error)")
+            }
+        }
+    
     private func seedInitialDataIfNeeded() {
         guard let context = context else { return }
         let descriptor = FetchDescriptor<WatchModel>()
